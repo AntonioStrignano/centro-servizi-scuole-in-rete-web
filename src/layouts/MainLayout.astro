@@ -6,9 +6,23 @@ import Footer from "../components/Footer.astro";
 interface Props {
   title: string;
   description?: string;
+  image?: string;
+  canonical?: string;
+  noindex?: boolean;
 }
 
-const { title, description = "Consulenza per scuole paritarie ed enti privati." } = Astro.props;
+const {
+  title,
+  description = "Consulenza per scuole paritarie ed enti privati.",
+  image = "/images/logo.png",
+  canonical,
+  noindex = false,
+} = Astro.props;
+
+const hasValidSite = Astro.site && Astro.site.hostname !== "example.com";
+const canonicalUrl = canonical ?? (hasValidSite ? new URL(Astro.url.pathname, Astro.site).toString() : undefined);
+const ogImageUrl = hasValidSite && image ? new URL(image, Astro.site).toString() : undefined;
+const robots = noindex ? "noindex, nofollow" : "index, follow";
 ---
 
 <!doctype html>
@@ -18,6 +32,20 @@ const { title, description = "Consulenza per scuole paritarie ed enti privati." 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+    {ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
+
+    <meta name="twitter:card" content={ogImageUrl ? "summary_large_image" : "summary"} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {ogImageUrl && <meta name="twitter:image" content={ogImageUrl} />}
   </head>
   <body>
     <nav class="skip-links" aria-label="Link rapidi di accessibilità">

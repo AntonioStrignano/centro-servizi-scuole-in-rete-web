@@ -156,3 +156,8 @@ Chiudere un pass di QA + SEO finale, fare il primo commit e pubblicare una previ
 	- `src/pages/legal/accessibilita.astro`
 	- `src/pages/legal/privacy-policy.astro`
 	- `src/pages/legal/cookie-policy.astro`
+
+## Aggiornamento operativo 2026-07-01 (ottimizzazione SEO base)
+- Esteso `src/layouts/MainLayout.astro` con metadati SEO globali: `robots`, `canonical` (quando il dominio non e placeholder), Open Graph e Twitter Card.
+- Aggiunte `description` specifiche a tutte le pagine pubbliche (`home`, `servizi`, `contatti`, pagine servizio e area legale) per migliorare pertinenza in SERP.
+- Mantenuto fallback sicuro: se `site` in `astro.config.mjs` e ancora `https://example.com`, i canonical assoluti non vengono emessi per evitare URL errati indicizzati.
