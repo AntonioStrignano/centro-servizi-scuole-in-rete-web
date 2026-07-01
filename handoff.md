@@ -150,3 +150,9 @@ Chiudere un pass di QA + SEO finale, fare il primo commit e pubblicare una previ
 ## Aggiornamento operativo 2026-07-01 (allineamento cookie policy a stato reale)
 - Verifica tecnica del sorgente: nessuna integrazione analytics/tracciamento e nessuna impostazione esplicita di cookie lato applicazione.
 - Aggiornata `src/pages/legal/cookie-policy.astro` dichiarando che al momento non sono installati cookie first-party (tecnici o profilazione) e che non e richiesto banner consenso cookie in assenza di categorie non tecniche.
+
+## Aggiornamento operativo 2026-07-01 (pulizia note area legale)
+- Rimosse le note finali di bozza/compliance dalle pagine legali per una versione pubblicabile piu pulita:
+	- `src/pages/legal/accessibilita.astro`
+	- `src/pages/legal/privacy-policy.astro`
+	- `src/pages/legal/cookie-policy.astro`
