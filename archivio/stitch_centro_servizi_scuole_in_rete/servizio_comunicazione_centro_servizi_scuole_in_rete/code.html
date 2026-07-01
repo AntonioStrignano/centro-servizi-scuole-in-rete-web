@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Comunicazione Strategica per la Scuola - Scuole In Rete</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#bfc9c4",
+                    "background": "#f8faf7",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e7e9e6",
+                    "primary": "#00352a",
+                    "on-secondary-fixed": "#001c3a",
+                    "tertiary": "#243129",
+                    "surface": "#f8faf7",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f2f4f1",
+                    "secondary-fixed-dim": "#a6c8ff",
+                    "tertiary-fixed-dim": "#bccabf",
+                    "primary-fixed-dim": "#98d2bf",
+                    "on-tertiary-fixed-variant": "#3d4a41",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#124780",
+                    "surface-tint": "#306859",
+                    "primary-container": "#0f4d3f",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#135042",
+                    "surface-container": "#edeeec",
+                    "surface-container-highest": "#e1e3e0",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#404945",
+                    "outline": "#707975",
+                    "surface-variant": "#e1e3e0",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#84bdab",
+                    "on-secondary-container": "#194c85",
+                    "inverse-primary": "#98d2bf",
+                    "secondary": "#325f9a",
+                    "on-tertiary-fixed": "#121e17",
+                    "inverse-on-surface": "#f0f1ee",
+                    "tertiary-container": "#3a473f",
+                    "on-primary-fixed": "#002019",
+                    "secondary-fixed": "#d4e3ff",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#191c1b",
+                    "on-error": "#ffffff",
+                    "on-background": "#191c1b",
+                    "inverse-surface": "#2e3130",
+                    "secondary-container": "#93bdfe",
+                    "surface-dim": "#d9dad8",
+                    "tertiary-fixed": "#d8e6db",
+                    "surface-bright": "#f8faf7",
+                    "primary-fixed": "#b4efdb",
+                    "on-tertiary-container": "#a7b5aa"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Merriweather"],
+                    "label-lg": ["\"Source Sans 3\""],
+                    "headline-lg": ["Merriweather"],
+                    "label-sm": ["\"Source Sans 3\""],
+                    "headline-md": ["Merriweather"],
+                    "body-md": ["\"Source Sans 3\""],
+                    "display-lg": ["Merriweather"],
+                    "body-lg": ["\"Source Sans 3\""]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "44px", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-elevation {
+            box-shadow: 0px 4px 20px rgba(29, 36, 32, 0.06);
+        }
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 8px 30px rgba(29, 36, 32, 0.1);
+        }
+        .paper-gradient {
+            background: linear-gradient(135deg, rgba(0, 53, 42, 0.03) 0%, rgba(24, 75, 132, 0.03) 100%);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed-dim selection:text-primary">
+<!-- Header / Navigation Shell -->
+<header class="w-full top-0 sticky z-50 bg-surface border-b border-surface-container-highest transition-all duration-300">
+<div class="flex justify-between items-center h-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="font-headline-md text-headline-md text-primary tracking-tight">Scuole In Rete</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Home</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-lg text-label-lg" href="#">Servizi</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Contatti</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block text-on-surface-variant font-label-lg text-label-lg hover:text-primary transition-colors">Chiama Ora</button>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-lg font-label-lg text-label-lg hover:opacity-90 transition-all soft-elevation">Richiedi Info</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-20 pb-24 md:pt-32 md:pb-40 paper-gradient">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="max-w-3xl">
+<span class="inline-block bg-primary-container/10 text-primary-container px-4 py-1.5 rounded-full font-label-sm text-label-sm mb-6 uppercase tracking-widest">Servizio Comunicazione</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8 leading-tight">
+                        Comunicazione Strategica per la Scuola.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl leading-relaxed">
+                        Strutturiamo una comunicazione interna ed esterna chiara, tempestiva e coerente con l'identità della scuola. Un approccio editoriale per elevare l'autorevolezza della vostra istituzione.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-lg text-label-lg hover:opacity-95 transition-all soft-elevation flex items-center gap-2" href="#cta">
+                            Richiedi una consulenza <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Abstract background shape -->
+<div class="absolute top-1/2 right-0 -translate-y-1/2 w-1/3 h-2/3 hidden lg:block opacity-10">
+
+</div>
+</section>
+<!-- Bento Services Section -->
+<section class="py-24 bg-surface">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Cosa includiamo nel piano</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">Un ecosistema integrato di strumenti e strategie per gestire ogni flusso informativo scolastico.</p>
+</div>
+<div class="bento-grid">
+<!-- Feature Card 1 -->
+<div class="col-span-12 md:col-span-8 bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/30 soft-elevation card-hover transition-all duration-300">
+<div class="flex flex-col md:flex-row gap-8 h-full">
+<div class="flex-1">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">family_history</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Piano comunicazione Famiglie e Personale</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                    Definiamo protocolli standardizzati per le comunicazioni di plesso, garantendo che ogni messaggio arrivi a destinazione senza distorsioni, migliorando il clima interno e la fiducia delle famiglie.
+                                </p>
+</div>
+<div class="flex-1 rounded-lg overflow-hidden min-h-[200px]">
+<div class="w-full h-full bg-cover bg-center" data-alt="A professional photograph of a diverse group of school staff and parents sitting around a warm wooden table in a brightly lit library. They are engaged in a constructive, collaborative discussion with tablets and documents open. The lighting is soft and natural, emphasizing a modern institutional atmosphere with deep forest green accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDiZVR_yTg-jeWPmP02CG8SpU6ls_fy_y4oOabyJ1KAZpPJaA-mmbe-goSQp4RPCALHsXuk3f3uSTM3Fw_9OYMBKBGawpeKkdD3RGbHWfF0msGBs5oLGpK8X_9ukKp7a4RscCsma4pm4BOzsZJ0t96BncTskkusXdAE4ittnTBRhsWBOwUMjeH1-TbRdWhvjJmdPqg9hGCYrStCEMNMrEb96I8jmxmUYPpiGMGCnHYP0tlNiehaIsyPllg_eXH7mDDga3ZDWDzKDnM')"></div>
+</div>
+</div>
+</div>
+<!-- Feature Card 2 -->
+<div class="col-span-12 md:col-span-4 bg-primary text-on-primary p-8 rounded-xl soft-elevation card-hover transition-all duration-300 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-on-primary-container text-4xl mb-6">rss_feed</span>
+<h3 class="font-headline-md text-headline-md mb-4">Gestione Canali</h3>
+</div>
+<p class="font-body-md text-body-md opacity-90">
+                            Presidio costante del sito istituzionale, social media e gestione professionale delle circolari digitali.
+                        </p>
+</div>
+<!-- Feature Card 3 -->
+<div class="col-span-12 md:col-span-5 bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/30 soft-elevation card-hover transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">public</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Comunicazione Territoriale</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Rafforziamo il legame tra la scuola e il suo territorio, curando le pubbliche relazioni e la visibilità presso enti locali e partner.
+                        </p>
+</div>
+<!-- Feature Card 4 -->
+<div class="col-span-12 md:col-span-7 bg-surface-container-low p-8 rounded-xl border border-outline-variant/30 soft-elevation card-hover transition-all duration-300 overflow-hidden relative">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">video_library</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Materiali Multimediali</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+                                Produzione di contenuti fotografici, video e grafici di alta qualità per open day, eventi e documentazione delle attività didattiche.
+                            </p>
+</div>
+<div class="absolute right-0 bottom-0 w-1/2 h-full opacity-20 pointer-events-none">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Outcome Section -->
+<section class="py-24 border-t border-surface-container-highest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1">
+<div class="relative rounded-2xl overflow-hidden soft-elevation aspect-[4/3]">
+<img class="object-cover w-full h-full" data-alt="A clean, minimalist workspace showing a laptop screen with a professional school website and branding guidelines. Next to the laptop is a printed brochure with sophisticated serif typography and a leather-bound planner. The setting is a bright, high-ceilinged office with soft shadows and warm paper-like tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd9ekwbSBG2iEskkI6nwYqp35TEV3TEQBDy93JDi_xIxHHhFqaAAe-lGxivSAFeAqxs7tiNxSM93GRdzMQyocVt05okLyE5GE0RpnlP5kiwUdJUU-L5aFcPeO5h0iDrkBVMIgm2mXlvUJxGEyGrhxhHabAoIl30XDdjq3ZKyu6D45KF-IXhRPqEPpIzJj2zkifaizNTLzB4-o9HmvmLyBRAztNbgPO1RW5jQVHKKkdRvuwKxcOP8eiQKP8c7nbvz_9uV5SjxpuJJQ"/>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-12">I risultati che otterremo insieme</h2>
+<div class="space-y-10">
+<div class="flex gap-6">
+<div class="bg-primary-fixed text-primary w-12 h-12 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary uppercase tracking-wider mb-2">Efficacia Operativa</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Riduzione drastica dei tempi di gestione delle emergenze e delle routine comunicative quotidiane.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="bg-primary-fixed text-primary w-12 h-12 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">sync_disabled</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary uppercase tracking-wider mb-2">Riduzione Disallineamenti</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Eliminazione delle zone d'ombra informative che generano incomprensioni e attriti tra scuola e stakeholder.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="bg-primary-fixed text-primary w-12 h-12 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary uppercase tracking-wider mb-2">Qualità Percepita</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Posizionamento della scuola come ente eccellente, trasparente e attento alle esigenze della comunità.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 bg-primary text-on-primary" id="cta">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<div class="max-w-2xl mx-auto">
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-lg mb-8">Trasforma la comunicazione della tua scuola oggi.</h2>
+<p class="font-body-lg text-body-lg mb-12 opacity-80">Parliamo del vostro progetto e scopriamo come strutturare un'immagine coordinata e professionale.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="bg-surface text-primary px-10 py-5 rounded-lg font-bold hover:bg-surface-container-high transition-all soft-elevation">Prenota un incontro</button>
+<button class="border border-on-primary/30 text-on-primary px-10 py-5 rounded-lg font-bold hover:bg-on-primary/10 transition-all">Sfoglia il portfolio</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-surface-container-low border-t border-surface-container-highest py-16">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-12">
+<div>
+<div class="font-headline-md text-headline-md text-primary mb-6">Scuole In Rete</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Soluzioni strategiche per l'eccellenza scolastica italiana.</p>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary uppercase mb-6">Servizi</h5>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Comunicazione</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Gestione Amministrativa</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Supporto Didattico</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary uppercase mb-6">Info</h5>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Termini e Condizioni</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary uppercase mb-6">Social</h5>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-outline flex items-center justify-center hover:border-primary hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-outline flex items-center justify-center hover:border-primary hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">groups</span>
+</a>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-surface-container-highest flex flex-col md:flex-row justify-between items-center gap-4 text-center">
+<p class="text-on-surface-variant font-body-md text-body-md">© 2024 Centro Servizi Scuole In Rete s.r.l. - P.IVA 01234567890</p>
+<div class="flex gap-6">
+<span class="text-label-sm font-label-sm text-outline">Made with precision</span>
+<span class="text-label-sm font-label-sm text-outline">ISO 9001 Certified</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple intersection observer for reveal animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-4');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.classList.add('opacity-0', 'translate-y-4', 'transition-all', 'duration-700');
+            observer.observe(card);
+        });
+    </script>
+</body></html>

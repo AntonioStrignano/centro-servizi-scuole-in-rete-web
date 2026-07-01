@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Consulenza Integrata - Scuole In Rete</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-elevation {
+            box-shadow: 0px 4px 20px rgba(29, 36, 32, 0.06);
+        }
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 8px 30px rgba(29, 36, 32, 0.1);
+        }
+        .bento-gradient {
+            background: linear-gradient(135deg, rgba(152, 210, 191, 0.05) 0%, rgba(147, 189, 254, 0.05) 100%);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "outline-variant": "#bfc9c4",
+                "background": "#f8faf7",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-high": "#e7e9e6",
+                "primary": "#00352a",
+                "on-secondary-fixed": "#001c3a",
+                "tertiary": "#243129",
+                "surface": "#f8faf7",
+                "error": "#ba1a1a",
+                "surface-container-low": "#f2f4f1",
+                "secondary-fixed-dim": "#a6c8ff",
+                "tertiary-fixed-dim": "#bccabf",
+                "primary-fixed-dim": "#98d2bf",
+                "on-tertiary-fixed-variant": "#3d4a41",
+                "on-error-container": "#93000a",
+                "on-secondary-fixed-variant": "#124780",
+                "surface-tint": "#306859",
+                "primary-container": "#0f4d3f",
+                "error-container": "#ffdad6",
+                "on-primary-fixed-variant": "#135042",
+                "surface-container": "#edeeec",
+                "surface-container-highest": "#e1e3e0",
+                "on-tertiary": "#ffffff",
+                "on-surface-variant": "#404945",
+                "outline": "#707975",
+                "surface-variant": "#e1e3e0",
+                "on-secondary": "#ffffff",
+                "on-primary-container": "#84bdab",
+                "on-secondary-container": "#194c85",
+                "inverse-primary": "#98d2bf",
+                "secondary": "#325f9a",
+                "on-tertiary-fixed": "#121e17",
+                "inverse-on-surface": "#f0f1ee",
+                "tertiary-container": "#3a473f",
+                "on-primary-fixed": "#002019",
+                "secondary-fixed": "#d4e3ff",
+                "on-primary": "#ffffff",
+                "on-surface": "#191c1b",
+                "on-error": "#ffffff",
+                "on-background": "#191c1b",
+                "inverse-surface": "#2e3130",
+                "secondary-container": "#93bdfe",
+                "surface-dim": "#d9dad8",
+                "tertiary-fixed": "#d8e6db",
+                "surface-bright": "#f8faf7",
+                "primary-fixed": "#b4efdb",
+                "on-tertiary-container": "#a7b5aa"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "container-max": "1280px",
+                "margin-desktop": "64px",
+                "gutter": "24px",
+                "unit": "8px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "display-lg-mobile": ["Merriweather"],
+                "label-lg": ["\"Source Sans 3\""],
+                "headline-lg": ["Merriweather"],
+                "label-sm": ["\"Source Sans 3\""],
+                "headline-md": ["Merriweather"],
+                "body-md": ["\"Source Sans 3\""],
+                "display-lg": ["Merriweather"],
+                "body-lg": ["\"Source Sans 3\""]
+            },
+            "fontSize": {
+                "display-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-lg": ["32px", {"lineHeight": "44px", "fontWeight": "700"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="w-full top-0 sticky z-50 bg-surface border-b border-surface-container-highest">
+<div class="flex justify-between items-center h-20 max-w-container-max mx-auto px-margin-desktop">
+<div class="font-headline-md text-headline-md text-primary tracking-tight">Scuole In Rete</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-lg text-label-lg text-primary font-bold border-b-2 border-primary pb-1" href="#">Servizi</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Contatti</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block px-6 py-2.5 bg-transparent border border-primary text-primary font-label-lg text-label-lg rounded-full hover:bg-primary/5 transition-all">Chiama Ora</button>
+<button class="px-6 py-2.5 bg-primary text-on-primary font-label-lg text-label-lg rounded-full hover:opacity-90 shadow-sm transition-all">Richiedi Info</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-20 pb-24 lg:pt-32 lg:pb-40 bento-gradient">
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-full font-label-sm text-label-sm mb-6">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+                            SERVIZI DI ALTO PROFILO
+                        </div>
+<h1 class="font-display-lg text-display-lg mb-8 leading-[1.1]">Consulenza Integrata per Istituti Scolastici</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                            Affianchiamo le scuole paritarie con una consulenza integrata, dalla didattica alla gestione amministrativa, contabile e del personale. Un partner unico per la crescita della vostra istituzione.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<a class="px-8 py-4 bg-primary-container text-on-primary-container rounded-lg font-label-lg text-label-lg hover:shadow-lg transition-all flex items-center gap-2" href="#intervento">
+                                Scopri le aree di intervento
+                                <span class="material-symbols-outlined">arrow_downward</span>
+</a>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/5 rounded-[32px] blur-2xl group-hover:bg-primary/10 transition-all duration-500"></div>
+<img class="relative z-10 w-full aspect-[4/3] object-cover rounded-[24px] shadow-2xl" data-alt="A professional and elegant medium shot of a high-end academic office. A senior educational consultant in a charcoal blazer is speaking with two school administrators. The setting is bright and features warm wooden textures, large windows with soft natural light, and stacks of organized institutional documents. The mood is authoritative, collaborative, and sophisticated, reflecting a modern institutional aesthetic with deep greens and clean whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSy6xyLkDDWMDIZoOtDEz7bWg0ac8wj2HHCQnRdT8dWuPwffqdkmXxiPyYH6gchzsSTLsKayvE9I3ywQaPRIrkJ42m_0ZSxvpfIeb-2XvHkmH5YwfYgdUWJPmky1ytHRst9EXS-AW0wf-GBLTfPXX21wlRKqu4RdmqgGg6opJSq9iVkce1cpP93mTn1fftFhen95k7P_FLSetvGNt0eQIyfjgWjxtge1yxJp-FWQ-SpWKdLSsDtKeIjcmWEVr4EZEAPeEm9x-N96k"/>
+</div>
+</div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute right-0 bottom-0 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[400px]" style="font-variation-settings: 'wght' 100;">school</span>
+</div>
+</section>
+<!-- Aree di Intervento (Bento Grid) -->
+<section class="py-24 lg:py-32 bg-surface" id="intervento">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16 lg:mb-24">
+<h2 class="font-headline-lg text-headline-lg mb-4">Le Nostre Aree di Intervento</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                        Una visione a 360 gradi che copre ogni aspetto vitale dell'ecosistema scolastico, garantendo efficienza e qualità.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-gutter">
+<!-- Area 1: Famiglie -->
+<div class="md:col-span-3 lg:col-span-2 bg-surface-container-lowest p-8 rounded-[16px] border border-outline-variant soft-elevation card-hover transition-all">
+<div class="w-12 h-12 bg-secondary-fixed text-on-secondary-fixed rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Famiglie</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Supporto diretto al nucleo familiare per integrare la scuola nella vita quotidiana.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                                Incontri con specialisti
+                            </li>
+<li class="flex items-center gap-3 font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                                Sportello ascolto dedicato
+                            </li>
+</ul>
+</div>
+<!-- Area 2: Pedagogico -->
+<div class="md:col-span-3 lg:col-span-4 bg-primary-container text-on-primary-container p-8 lg:p-12 rounded-[16px] soft-elevation card-hover transition-all">
+<div class="flex flex-col lg:flex-row gap-8 items-start lg:items-center h-full">
+<div class="flex-1">
+<div class="w-12 h-12 bg-white/10 text-white rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Pedagogico &amp; Metodologico</h3>
+<p class="font-body-md text-body-md opacity-90 mb-6">Il cuore dell'istituzione scolastica: l'eccellenza didattica come pilastro fondamentale del servizio.</p>
+<div class="grid md:grid-cols-2 gap-4">
+<div class="bg-white/5 p-4 rounded-lg">
+<div class="font-label-lg text-label-lg mb-1">Didattica</div>
+<div class="font-body-md text-body-md">Coordinamento didattico specializzato</div>
+</div>
+<div class="bg-white/5 p-4 rounded-lg">
+<div class="font-label-lg text-label-lg mb-1">Strategia</div>
+<div class="font-body-md text-body-md">Supporto alla programmazione</div>
+</div>
+</div>
+</div>
+<div class="hidden lg:block w-48 h-48 bg-white/5 rounded-full flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-[100px] opacity-20">history_edu</span>
+</div>
+</div>
+</div>
+<!-- Area 3: Amministrativa -->
+<div class="md:col-span-2 lg:col-span-2 bg-surface-container-lowest p-8 rounded-[16px] border border-outline-variant soft-elevation card-hover transition-all">
+<div class="w-12 h-12 bg-primary-fixed text-on-primary-fixed rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">description</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Amministrativa</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Gestione fluida dei rapporti istituzionali e segreteria.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant rounded-full text-[12px] font-semibold">MIUR</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant rounded-full text-[12px] font-semibold">Regioni</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant rounded-full text-[12px] font-semibold">Segreteria</span>
+</div>
+</div>
+<!-- Area 4: Gestionale -->
+<div class="md:col-span-2 lg:col-span-2 bg-surface-container-lowest p-8 rounded-[16px] border border-outline-variant soft-elevation card-hover transition-all">
+<div class="w-12 h-12 bg-tertiary-fixed text-on-tertiary-fixed rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">query_stats</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Gestionale</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Controllo di gestione e monitoraggio economico per la sostenibilità.</p>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-3/4 rounded-full"></div>
+</div>
+<div class="mt-2 text-right font-label-sm text-label-sm text-tertiary">Monitoraggio Bilancio</div>
+</div>
+<!-- Area 5: Contabilità e Paghe -->
+<div class="md:col-span-2 lg:col-span-2 bg-surface-container-low p-8 rounded-[16px] border border-outline-variant soft-elevation card-hover transition-all relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 transition-transform group-hover:scale-110 duration-500">
+<span class="material-symbols-outlined text-[120px] text-primary/5">account_balance_wallet</span>
+</div>
+<div class="w-12 h-12 bg-primary text-on-primary rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Contabilità &amp; Paghe</h3>
+<ul class="space-y-2 relative z-10">
+<li class="font-body-md text-body-md text-on-surface-variant flex gap-2">
+<span class="text-primary">•</span> Adempimenti fiscali
+                            </li>
+<li class="font-body-md text-body-md text-on-surface-variant flex gap-2">
+<span class="text-primary">•</span> Gestione personale
+                            </li>
+<li class="font-body-md text-body-md text-on-surface-variant flex gap-2">
+<span class="text-primary">•</span> Previdenza
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-[1000px] mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<div class="p-12 lg:p-20 bg-background border border-outline-variant rounded-[32px] soft-elevation relative overflow-hidden">
+<!-- Subtle background light -->
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary-container via-primary to-secondary-container"></div>
+<h2 class="font-display-lg text-display-lg mb-8">Pronto a trasformare la gestione della tua scuola?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                        I nostri consulenti sono pronti ad analizzare le vostre esigenze specifiche per proporre un piano di affiancamento su misura.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<a class="w-full sm:w-auto px-10 py-5 bg-primary text-on-primary rounded-xl font-headline-md text-[18px] hover:shadow-xl hover:opacity-90 transition-all flex items-center justify-center gap-3 group" href="#">
+                            Richiedi una Consulenza su Misura
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="w-full sm:w-auto px-10 py-5 border border-outline text-primary rounded-xl font-label-lg text-label-lg hover:bg-surface-container-low transition-all" href="#">
+                            Parlaci del tuo progetto
+                        </a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-surface-container-low border-t border-surface-container-highest">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter max-w-container-max mx-auto px-margin-desktop py-16">
+<div class="lg:col-span-1">
+<div class="font-headline-md text-headline-md text-primary mb-6">Scuole In Rete</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                    Eccellenza e supporto per l'educazione paritaria in Italia.
+                </p>
+<div class="flex gap-4">
+<a class="text-primary hover:opacity-70 transition-opacity" href="#"><span class="material-symbols-outlined">face_nod</span></a>
+<a class="text-primary hover:opacity-70 transition-opacity" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold mb-6">Servizi</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary underline-offset-4 transition-all" href="#">Consulenza Integrata</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary underline-offset-4 transition-all" href="#">Gestione Amministrativa</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary underline-offset-4 transition-all" href="#">Contabilità</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold mb-6">Azienda</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary underline-offset-4 transition-all" href="#">Chi Siamo</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary underline-offset-4 transition-all" href="#">Contatti</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary underline-offset-4 transition-all" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold mb-6">Legale</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary underline-offset-4 transition-all" href="#">Cookie Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary underline-offset-4 transition-all" href="#">Termini e Condizioni</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary underline-offset-4 transition-all" href="#">Note Legali</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop border-t border-surface-container-highest py-8">
+<p class="font-body-md text-body-md text-on-surface-variant text-center opacity-70">
+                © 2024 Centro Servizi Scuole In Rete s.r.l. - P.IVA 01234567890
+            </p>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for navbar transparency shift
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+                nav.classList.add('bg-white');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-10');
+                    entry.target.classList.remove('opacity-0');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-hover').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

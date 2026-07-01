@@ -1,0 +1,41 @@
+---
+import { company, legalLinks } from "../data/site";
+---
+
+<footer class="border-t border-black/10 bg-[#e7e9e6]">
+  <div class="site-container grid gap-10 py-12 md:grid-cols-4">
+    <div>
+      <a href="/" class="inline-flex" aria-label="Centro Servizi Scuole In Rete - Home">
+        <img src="/images/logotipo.png" alt="Logotipo Centro Servizi Scuole In Rete" class="h-10 w-auto" loading="lazy" decoding="async" />
+      </a>
+      <p class="mt-3 text-sm text-black/70">Centro Servizi Scuole In Rete: eccellenza nella consulenza per istituzioni scolastiche.</p>
+    </div>
+    <div>
+      <h3 class="text-xs font-semibold uppercase tracking-[0.16em] text-black/75">Informazioni legali</h3>
+      <ul class="mt-3 space-y-2 text-sm text-black/70">
+        {legalLinks.map((link) => (
+          <li><a href={link.href} class="hover:text-[var(--brand)]">{link.label}</a></li>
+        ))}
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-xs font-semibold uppercase tracking-[0.16em] text-black/75">Contatti rapidi</h3>
+      <ul class="mt-3 space-y-2 text-sm text-black/70">
+        <li><a href={`tel:${company.phone.replace(/\./g, "")}`}>{company.phone}</a></li>
+        <li><a href={`mailto:${company.email}`}>{company.email}</a></li>
+        <li>{company.address}</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-xs font-semibold uppercase tracking-[0.16em] text-black/75">Dati societari</h3>
+      <ul class="mt-3 space-y-2 text-sm text-black/70">
+        <li>P.IVA/CF: {company.vatCf}</li>
+        <li>PEC: {company.pec}</li>
+        <li>SDI: {company.sdi} · REA: {company.rea}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-container border-t border-black/10 py-5">
+    <p class="text-xs text-black/60">© 2026 Centro Servizi Scuole In Rete s.r.l.</p>
+  </div>
+</footer>

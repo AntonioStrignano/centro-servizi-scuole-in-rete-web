@@ -1,0 +1,69 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { company, cta } from "../data/site";
+---
+
+<MainLayout title="Contatti | Centro Servizi Scuole In Rete">
+  <section class="section-pad text-center">
+    <div class="site-container">
+      <h1 class="mx-auto max-w-4xl text-5xl leading-tight text-[var(--brand)] md:text-6xl">Mettiamoci in contatto. Il supporto che la tua scuola merita.</h1>
+      <p class="mx-auto mt-6 max-w-2xl text-lg text-black/70">Siamo a disposizione per consulenze amministrative, gestionali e servizi dedicati al mondo dell'istruzione.</p>
+      <p class="mx-auto mt-7 inline-flex rounded-full border border-black/15 bg-white px-4 py-2 text-xs font-semibold text-black/75">Rispondiamo a ogni richiesta entro 24 ore lavorative</p>
+    </div>
+  </section>
+
+  <section class="pb-20">
+    <div class="site-container grid gap-5 md:grid-cols-3">
+      <article class="card-soft p-8 text-center">
+        <h2 class="text-3xl text-[var(--brand)]">Email</h2>
+        <p class="mt-2 text-sm text-black/70">Inviaci una richiesta formale o documentazione.</p>
+        <p class="mt-5 text-sm font-semibold text-[var(--brand-2)]"><a href={`mailto:${company.email}`}>{company.email}</a></p>
+      </article>
+      <article class="card-soft p-8 text-center">
+        <h2 class="text-3xl text-[var(--brand)]">Telefono</h2>
+        <p class="mt-2 text-sm text-black/70">Parla direttamente con un nostro operatore.</p>
+        <p class="mt-5 text-sm font-semibold text-[var(--brand-2)]"><a href={`tel:${company.phone.replace(/\./g, "")}`}>{company.phone}</a></p>
+      </article>
+      <article class="card-soft p-8 text-center">
+        <h2 class="text-3xl text-[var(--brand)]">Sede legale</h2>
+        <p class="mt-2 text-sm text-black/70">Riceviamo previo appuntamento presso i nostri uffici.</p>
+        <p class="mt-5 text-sm font-semibold text-black/80">{company.address}</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section-pad pt-0">
+    <div class="site-container grid gap-5 lg:grid-cols-12">
+      <div class="card-soft relative min-h-[380px] overflow-hidden lg:col-span-8">
+        <img
+          src="/images/maps.png"
+          alt="Mappa della sede operativa"
+          class="absolute inset-0 h-full w-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <aside class="rounded-2xl bg-[var(--brand)] p-8 text-white lg:col-span-4">
+        <h2 class="text-4xl leading-tight">Inizia ora la tua collaborazione</h2>
+        <p class="mt-4 text-sm text-white/80">Siamo pronti ad ascoltare le tue esigenze e costruire insieme un percorso di crescita per il tuo istituto.</p>
+        <div class="mt-7 space-y-3">
+          <a href={cta.primaryHref} class="inline-flex w-full items-center justify-center rounded-lg border border-white bg-white px-4 py-3 text-sm font-semibold text-[var(--brand)] transition hover:bg-white/90">{cta.primaryLabel}</a>
+          <a href={cta.secondaryHref} class="inline-flex w-full items-center justify-center rounded-lg border border-white/70 bg-transparent px-4 py-3 text-sm font-semibold text-white transition hover:bg-white/10 hover:text-white">{cta.secondaryLabel}</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="pb-16">
+    <div class="site-container">
+      <div class="card-soft p-7">
+        <h2 class="text-3xl text-[var(--brand)]">Contatto rapido</h2>
+        <p class="mt-2 text-sm text-black/70">Se preferisci, scrivici direttamente via email o chiamaci durante l'orario di ufficio.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href={cta.primaryHref} class="btn-primary">{cta.primaryLabel}</a>
+          <a href={cta.secondaryHref} class="btn-secondary">{cta.secondaryLabel}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>

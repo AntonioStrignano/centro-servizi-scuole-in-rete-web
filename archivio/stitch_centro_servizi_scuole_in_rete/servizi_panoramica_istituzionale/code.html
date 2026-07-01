@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html class="light" lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Servizi - CSSR Centro Servizi Scuole In Rete</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&amp;family=Source+Sans+3:ital,wght@0,200..900;1,200..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .soft-institutional-shadow {
+            box-shadow: 0px 4px 20px rgba(29, 36, 32, 0.06);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 8px 30px rgba(29, 36, 32, 0.08);
+        }
+        .elegant-ease {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .paper-texture {
+            background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+            opacity: 0.05;
+            pointer-events: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#707975",
+                        "on-primary-fixed": "#002019",
+                        "error": "#ba1a1a",
+                        "primary-container": "#0f4d3f",
+                        "on-surface": "#191c1b",
+                        "surface-dim": "#d9dad8",
+                        "secondary-fixed-dim": "#a6c8ff",
+                        "surface": "#f8faf7",
+                        "secondary-fixed": "#d4e3ff",
+                        "on-secondary-fixed-variant": "#124780",
+                        "surface-variant": "#e1e3e0",
+                        "surface-tint": "#306859",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#bccabf",
+                        "secondary": "#325f9a",
+                        "on-surface-variant": "#404945",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f0f1ee",
+                        "on-background": "#191c1b",
+                        "on-primary-fixed-variant": "#135042",
+                        "surface-container-low": "#f2f4f1",
+                        "on-primary-container": "#84bdab",
+                        "tertiary": "#243129",
+                        "inverse-primary": "#98d2bf",
+                        "primary-fixed-dim": "#98d2bf",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#001c3a",
+                        "tertiary-container": "#3a473f",
+                        "outline-variant": "#bfc9c4",
+                        "surface-container-highest": "#e1e3e0",
+                        "tertiary-fixed": "#d8e6db",
+                        "on-secondary-container": "#194c85",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#b4efdb",
+                        "on-tertiary-fixed-variant": "#3d4a41",
+                        "surface-container-high": "#e7e9e6",
+                        "surface-container": "#edeeec",
+                        "inverse-surface": "#2e3130",
+                        "on-tertiary-container": "#a7b5aa",
+                        "secondary-container": "#93bdfe",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#f8faf7",
+                        "on-tertiary-fixed": "#121e17",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f8faf7",
+                        "on-error-container": "#93000a",
+                        "primary": "#00352a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Merriweather"],
+                        "body-md": ["\"Source Sans 3\""],
+                        "headline-md": ["Merriweather"],
+                        "label-sm": ["\"Source Sans 3\""],
+                        "display-lg": ["Merriweather"],
+                        "label-lg": ["\"Source Sans 3\""],
+                        "display-lg-mobile": ["Merriweather"],
+                        "body-lg": ["\"Source Sans 3\""]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "44px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased overflow-x-hidden">
+<div class="fixed inset-0 paper-texture"></div>
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 bg-surface/90 backdrop-blur-md shadow-sm">
+<nav class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<div class="font-headline-md text-headline-md font-bold text-primary">
+                CSSR
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Home</a>
+<a class="font-label-lg text-label-lg text-primary border-b-2 border-primary pb-1" href="#">Servizi</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Contatti</a>
+</div>
+<div class="flex gap-4 items-center">
+<button class="hidden lg:block font-label-lg text-label-lg text-secondary px-4 py-2 hover:bg-secondary-container/10 rounded-lg elegant-ease">Chiama ora</button>
+<button class="bg-primary text-on-primary font-label-lg text-label-lg px-6 py-3 rounded-lg shadow-sm hover:opacity-90 active:scale-95 elegant-ease">Richiedi informazioni</button>
+</div>
+</nav>
+</header>
+<main class="relative z-10">
+<!-- Intro Header -->
+<section class="pt-24 pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+<div class="inline-block px-4 py-1 mb-6 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wider">
+                Eccellenza Amministrativa
+            </div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 max-w-4xl mx-auto">
+                I nostri servizi per le scuole paritarie
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Soluzioni integrate per la gestione amministrativa, didattica e comunicativa della tua istituzione. Un partner affidabile per guardare al futuro dell'educazione.
+            </p>
+</section>
+<!-- Services Grid (Bento Logic) -->
+<section class="py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Service 1: Formazione -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl soft-institutional-shadow border border-outline-variant/30 card-hover elegant-ease flex flex-col h-full">
+<div class="w-14 h-14 bg-primary-container rounded-lg flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-on-primary text-3xl">school</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Formazione</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">
+                        Aggiornamento continuo per dirigenti e personale scolastico. Percorsi specialistici su normativa, gestione e metodologie innovative.
+                    </p>
+<a class="inline-flex items-center text-primary font-label-lg text-label-lg gap-2 group-hover:gap-4 transition-all duration-300" href="#">
+                        Scopri di più <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Service 2: Consulenza -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl soft-institutional-shadow border border-outline-variant/30 card-hover elegant-ease flex flex-col h-full">
+<div class="w-14 h-14 bg-secondary-container rounded-lg flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl">gavel</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Consulenza</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">
+                        Supporto legale, contabile e fiscale specializzato per il settore educativo. Risolviamo la complessità burocratica per lasciarvi liberi di educare.
+                    </p>
+<a class="inline-flex items-center text-primary font-label-lg text-label-lg gap-2 group-hover:gap-4 transition-all duration-300" href="#">
+                        Scopri di più <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Service 3: Progettazione -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl soft-institutional-shadow border border-outline-variant/30 card-hover elegant-ease flex flex-col h-full">
+<div class="w-14 h-14 bg-tertiary-fixed-dim rounded-lg flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant text-3xl">architecture</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Progettazione</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">
+                        Supporto per bandi, finanziamenti europei e nazionali. Sviluppo infrastrutturale e tecnologico per istituti all'avanguardia.
+                    </p>
+<a class="inline-flex items-center text-primary font-label-lg text-label-lg gap-2 group-hover:gap-4 transition-all duration-300" href="#">
+                        Scopri di più <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Service 4: Comunicazione -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl soft-institutional-shadow border border-outline-variant/30 card-hover elegant-ease flex flex-col h-full">
+<div class="w-14 h-14 bg-secondary-fixed rounded-lg flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-on-secondary-fixed-variant text-3xl">campaign</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Comunicazione</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">
+                        Marketing scolastico e presenza digitale strategica. Valorizziamo l'identità della vostra scuola per attrarre nuove iscrizioni.
+                    </p>
+<a class="inline-flex items-center text-primary font-label-lg text-label-lg gap-2 group-hover:gap-4 transition-all duration-300" href="#">
+                        Scopri di più <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Blocco "Per chi lavoriamo" -->
+<section class="py-24 bg-surface-container-low relative overflow-hidden">
+<div class="absolute right-0 top-0 w-1/3 h-full bg-primary/5 -skew-x-12 transform translate-x-1/2"></div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10">
+<div class="mb-16 text-center lg:text-left">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Per chi lavoriamo</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">L'istituzione al centro del nostro ecosistema di supporto professionale.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Target 1 -->
+<div class="group overflow-hidden rounded-2xl bg-surface-container-lowest soft-institutional-shadow border border-outline-variant/20 flex flex-col md:flex-row items-stretch elegant-ease">
+<div class="md:w-1/2 h-64 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 elegant-ease" data-alt="A professional architectural photograph of a modern school entrance with large glass windows and clean minimalist brickwork. Soft golden hour lighting illuminates the scene, casting elegant shadows. The style is editorial and clean, emphasizing an atmosphere of academic excellence and modern infrastructure in shades of muted green and cream." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSnn9V5GishYT085hN9H4RomlCNeD5SgAdk3HQ5pXVUwiJCB5YPrlfMZqfrQxhcbGJJIeoqAqWLQIVUQmCkucaBVy46Ut2vXmWp4JvfjaO_HP8eQpuQk4pOeDLh_xgBjMmWIV_0Bkk-j06KnL5yXRBtaLwczW661OYIBN0gNR8YFflFot7bSuAwz7-XlgxS36Yo-Dmkx8Y-l_CuM4_VPgoKWaBc3NoubeI_XChoWBxV2EdOuVqzmj4dLK4Z_sh5rjIyzPolc0oFBY"/>
+</div>
+<div class="p-10 md:w-1/2 flex flex-col justify-center">
+<h4 class="font-headline-md text-headline-md text-primary mb-4">Scuole Paritarie</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 italic leading-relaxed">
+                                "Sosteniamo l'eccellenza didattica attraverso una gestione amministrativa impeccabile e conforme ai più alti standard qualitativi."
+                            </p>
+<div class="flex items-center gap-3">
+<div class="w-8 h-[2px] bg-secondary"></div>
+<span class="font-label-lg text-label-lg text-secondary uppercase tracking-widest">Istituti Superiori e Primari</span>
+</div>
+</div>
+</div>
+<!-- Target 2 -->
+<div class="group overflow-hidden rounded-2xl bg-surface-container-lowest soft-institutional-shadow border border-outline-variant/20 flex flex-col md:flex-row items-stretch elegant-ease">
+<div class="md:w-1/2 h-64 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 elegant-ease" data-alt="A high-end interior view of a modern private educational facility with modular wooden furniture and soft ambient lighting. Large digital screens display educational data in a clean, professional layout. The mood is sophisticated and focused, featuring a color palette of deep forest green, professional blues, and warm ivory paper tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASTLw50tjPH73VgZKeKTPjc_NovHwHdMiBVqrRXveR_SO0JaZ4QfY339Iin2QPLDtCFgJvAuOTt2xjWTAJCzrH8zD8LWTcJya7tCf5gkMXZgxv2nYUakTHLcu4GyAD1CNwjWqvqa400kIhXi2vj6nzHITrhnFUnuaWx4LdwGo-3IqYcuNIOuI0xo00lEYuEFv0w8ohFTJJINPoMOtwRnfHJacRsdxL1YrrUWlTQXzpIazRCZWbJi6jG15bgMg7HqYI0gf12DY1CbQ"/>
+</div>
+<div class="p-10 md:w-1/2 flex flex-col justify-center">
+<h4 class="font-headline-md text-headline-md text-primary mb-4">Enti Educativi Privati</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 italic leading-relaxed">
+                                "Soluzioni strategiche per enti privati che desiderano scalare la propria offerta educativa mantenendo solidità fiscale e gestionale."
+                            </p>
+<div class="flex items-center gap-3">
+<div class="w-8 h-[2px] bg-secondary"></div>
+<span class="font-label-lg text-label-lg text-secondary uppercase tracking-widest">Fondazioni e Network Didattici</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Finale -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+<div class="bg-primary p-12 md:p-20 rounded-3xl relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary via-primary to-secondary/30 opacity-50"></div>
+<!-- Abstract SVG overlay -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-secondary-container/10 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-primary-fixed/5 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary mb-8">
+                        Hai bisogno di una consulenza su misura?
+                    </h2>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-12 max-w-xl mx-auto">
+                        I nostri esperti sono pronti ad analizzare le esigenze specifiche della tua scuola. Contattaci oggi stesso per un primo incontro conoscitivo.
+                    </p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="bg-on-primary text-primary font-headline-md text-headline-md px-10 py-5 rounded-xl hover:bg-surface-bright elegant-ease shadow-lg">
+                            Scrivici ora
+                        </button>
+<button class="border-2 border-on-primary text-on-primary font-headline-md text-headline-md px-10 py-5 rounded-xl hover:bg-on-primary hover:text-primary elegant-ease">
+                            Prenota Call
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="flex flex-col gap-6">
+<div class="font-headline-md text-headline-md font-bold text-primary">CSSR</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Punto di riferimento nazionale per la consulenza e i servizi integrati alle scuole paritarie e istituzioni educative private.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary elegant-ease" href="#">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary elegant-ease" href="#">
+<span class="material-symbols-outlined text-[20px]">alternate_email</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-lg text-label-lg text-primary uppercase mb-2">Informazioni Legali</h5>
+<a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary transition-all" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary transition-all" href="#">Cookie Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary transition-all" href="#">Accessibilità</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-primary transition-all" href="#">Note Legali</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-lg text-label-lg text-primary uppercase mb-2">Contatti Rapidi</h5>
+<div class="flex items-center gap-3 text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary">mail</span>
+                    info@cssr.it
+                </div>
+<div class="flex items-center gap-3 text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary">phone</span>
+                    +39 06 1234 5678
+                </div>
+<div class="flex items-center gap-3 text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary">location_on</span>
+                    Via delle Scuole, 100 - 00100 Roma
+                </div>
+</div>
+</div>
+<div class="px-margin-desktop py-8 max-w-container-max mx-auto border-t border-outline-variant/30 text-center md:text-left">
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+                © 2024 Centro Servizi Scuole In Rete s.r.l. - P.IVA 01234567890 - PEC: cssr@legalmail.it - SDI: M5UXCR1 - REA: RM-123456
+            </p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for cards
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const icon = card.querySelector('.material-symbols-outlined');
+                if(icon) {
+                    icon.style.transform = 'scale(1.1) rotate(5deg)';
+                    icon.style.transition = 'transform 0.3s ease';
+                }
+            });
+            card.addEventListener('mouseleave', () => {
+                const icon = card.querySelector('.material-symbols-outlined');
+                if(icon) {
+                    icon.style.transform = 'scale(1) rotate(0deg)';
+                }
+            });
+        });
+
+        // Smooth scroll implementation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>

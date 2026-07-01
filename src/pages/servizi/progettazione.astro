@@ -1,0 +1,75 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Progettazione | Centro Servizi Scuole In Rete">
+  <section class="section-pad">
+    <div class="site-container">
+      <p class="kicker">Servizi specialistici</p>
+      <h1 class="mt-4 max-w-4xl text-5xl leading-tight text-[var(--brand)] md:text-6xl">Progettazione e sviluppo educativo</h1>
+      <p class="mt-6 max-w-3xl text-lg text-black/70">Seguiamo la progettazione dalla fase iniziale fino all'attuazione operativa, con attenzione a sostenibilità, obiettivi e impatto educativo.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#cosa-facciamo" class="btn-primary">Scopri le attività</a>
+        <a href="/contatti" class="btn-secondary">Richiedi brochure</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="cosa-facciamo" class="section-pad bg-white">
+    <div class="site-container">
+      <h2 class="text-5xl text-[var(--brand)]">Cosa facciamo</h2>
+      <p class="mt-4 max-w-2xl text-black/70">Supportiamo le istituzioni scolastiche nel navigare la complessità dei bandi e della gestione progettuale.</p>
+      <div class="mt-10 grid gap-5 md:grid-cols-12">
+        <article class="card-soft p-7 md:col-span-8">
+          <h3 class="text-3xl text-[var(--brand)]">Progettazione per reti di scuole</h3>
+          <p class="mt-3 text-sm text-black/70">Creiamo sinergie tra istituti per massimizzare impatto territoriale e condivisione di buone pratiche.</p>
+        </article>
+        <article class="rounded-2xl bg-[var(--brand)] p-7 text-white md:col-span-4">
+          <h3 class="text-3xl">Sviluppo progetti finanziati</h3>
+          <p class="mt-3 text-sm text-white/85">Supporto completo su programmi UE, MIUR e PNRR: dalla candidatura al rendiconto finale.</p>
+        </article>
+        <article class="card-soft p-7 md:col-span-5">
+          <h3 class="text-3xl text-[var(--brand)]">Coordinamento fasi attuative</h3>
+          <p class="mt-3 text-sm text-black/70">Monitoraggio avanzamento, gestione tempi e conformità normativa in ogni fase.</p>
+        </article>
+        <article class="card-soft p-7 md:col-span-7">
+          <h3 class="text-3xl text-[var(--brand)]">Convegni e divulgazione</h3>
+          <p class="mt-3 text-sm text-black/70">Organizziamo eventi formativi per condividere i risultati e stimolare il dibattito educativo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="site-container split-grid items-center">
+      <div class="card-soft min-h-[320px] overflow-hidden">
+        <img
+          src="/images/progettazione.jpg"
+          alt="Team che analizza grafici e piano di progetto"
+          class="h-full w-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <div>
+        <h2 class="text-5xl text-[var(--brand)]">Il nostro obiettivo</h2>
+        <p class="mt-5 text-black/70">Migliorare la qualità dell'offerta formativa valorizzando il capitale più prezioso di ogni istituzione: risorse umane e governance.</p>
+        <ul class="mt-6 space-y-3 text-sm text-black/75">
+          <li><strong class="text-[var(--brand)]">Valorizzazione risorse:</strong> potenziamento competenze interne con percorsi strutturati.</li>
+          <li><strong class="text-[var(--brand)]">Efficienza istituzionale:</strong> semplificazione processi decisionali e operativi.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad bg-white">
+    <div class="site-container text-center">
+      <h2 class="mx-auto max-w-3xl text-5xl text-[var(--brand)]">Pronti a dare vita al vostro prossimo progetto?</h2>
+      <p class="mx-auto mt-5 max-w-2xl text-black/70">Contattate i nostri esperti per una consulenza preliminare gratuita.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/contatti" class="btn-primary">Richiedi una consulenza</a>
+        <a href="/servizi" class="btn-secondary">Scopri altri servizi</a>
+      </div>
+    </div>
+  </section>
+</MainLayout>

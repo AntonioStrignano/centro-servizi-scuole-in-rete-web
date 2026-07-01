@@ -1,0 +1,76 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Formazione | Centro Servizi Scuole In Rete">
+  <section class="section-pad">
+    <div class="site-container">
+      <p class="kicker">Eccellenza formativa</p>
+      <h1 class="mt-4 max-w-4xl text-5xl leading-tight text-[var(--brand)] md:text-6xl">Formazione per scuole paritarie</h1>
+      <p class="mt-6 max-w-3xl text-lg text-black/70">Progettiamo percorsi formativi pratici e subito applicabili nella gestione quotidiana delle istituzioni scolastiche.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#offerta" class="btn-primary">Scopri l'offerta</a>
+        <a href="https://www.facebook.com/groups/222457932312685/" target="_blank" rel="noreferrer" class="btn-secondary">Unisciti alla community</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="offerta" class="section-pad bg-white">
+    <div class="site-container">
+      <h2 class="text-5xl text-[var(--brand)]">Cosa offriamo</h2>
+      <p class="mt-3 max-w-2xl text-black/70">Un ecosistema completo di apprendimento pensato per le sfide concrete delle scuole moderne.</p>
+      <div class="mt-10 grid gap-5 md:grid-cols-12">
+        <article class="card-soft p-7 md:col-span-8">
+          <h3 class="text-3xl text-[var(--brand)]">Formazione in presenza</h3>
+          <p class="mt-3 text-sm text-black/70">Incontri diretti presso la sede scolastica o i nostri centri per favorire confronto operativo e trasferimento di competenze.</p>
+        </article>
+        <article class="rounded-2xl bg-[var(--brand)] p-7 text-white md:col-span-4">
+          <h3 class="text-3xl">E-learning</h3>
+          <p class="mt-3 text-sm text-white/80">Piattaforme digitali per informatica applicata, team building e aggiornamento normativo.</p>
+        </article>
+        <article class="card-soft p-7 md:col-span-6">
+          <h3 class="text-3xl text-[var(--brand)]">Atelier di ricerca-azione</h3>
+          <p class="mt-3 text-sm text-black/70">Laboratori pratici in cui la teoria incontra la sperimentazione diretta sul campo scolastico.</p>
+        </article>
+        <article class="card-soft p-7 md:col-span-6">
+          <h3 class="text-3xl text-[var(--brand)]">Seminari e workshop</h3>
+          <p class="mt-3 text-sm text-black/70">Approfondimenti con esperti su normativa, psicologia dell'educazione e gestione manageriale.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad bg-[var(--brand-soft)] text-white">
+    <div class="site-container split-grid items-center">
+      <div>
+        <h2 class="text-5xl">Focus progettuale</h2>
+        <p class="mt-5 text-white/80">Il nostro metodo valorizza l'identità specifica di ogni istituto e traduce la visione pedagogica in percorsi concreti.</p>
+        <ul class="mt-6 space-y-3 text-sm text-white/85">
+          <li>Progetto di scuola e rafforzamento PTOF.</li>
+          <li>Sviluppo di attività curriculari innovative.</li>
+          <li>Ampliamento dell'offerta per studenti e famiglie.</li>
+        </ul>
+      </div>
+      <div class="card-soft min-h-[320px] overflow-hidden">
+        <img
+          src="/images/formazione.jpg"
+          alt="Lezione frontale durante un workshop formativo"
+          class="h-full w-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="site-container rounded-3xl bg-[linear-gradient(135deg,#2f4f96,#5f79b6)] p-10 text-center text-white md:p-16">
+      <h2 class="text-5xl">Pronto a far crescere la tua scuola?</h2>
+      <p class="mx-auto mt-5 max-w-2xl text-white/80">Unisciti a una community professionale e resta aggiornato sulle novità del settore.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/contatti" class="rounded-lg bg-white px-6 py-3 text-sm font-bold text-[var(--brand)]">Richiedi una consulenza</a>
+        <a href="/contatti" class="rounded-lg border border-white/70 px-6 py-3 text-sm font-bold">Parla con noi</a>
+      </div>
+    </div>
+  </section>
+</MainLayout>

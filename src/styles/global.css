@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+3:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f4f4f0;
+  --surface: #ffffff;
+  --ink: #1d2420;
+  --brand: #243f7a;
+  --brand-soft: #2f4f96;
+  --brand-2: #5f79b6;
+  --muted: #5d667d;
+  --line: #d7ddd9;
+  --paper: #eff2ef;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at top right, #e6ebf8 0%, #f4f4f0 45%, #fafaf8 100%);
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Merriweather", Georgia, serif;
+  letter-spacing: -0.015em;
+}
+
+.site-container {
+  margin: 0 auto;
+  width: min(1280px, calc(100% - 2.5rem));
+}
+
+.section-pad {
+  padding-block: clamp(3.5rem, 7vw, 7rem);
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in oklab, var(--brand-2) 25%, white);
+  background: color-mix(in oklab, var(--brand-2) 16%, white);
+  color: var(--brand);
+  padding: 0.3rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.card-soft {
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: var(--surface);
+  box-shadow: 0 6px 20px rgba(28, 35, 31, 0.06);
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.7rem;
+  padding: 0.8rem 1.2rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.btn-primary {
+  background: var(--brand);
+  color: #fff;
+  border: 1px solid color-mix(in oklab, var(--brand) 82%, black);
+  box-shadow: 0 8px 18px rgba(36, 63, 122, 0.22);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--brand);
+  border: 1px solid color-mix(in oklab, var(--brand) 30%, white);
+}
+
+.btn-secondary:hover {
+  background: color-mix(in oklab, var(--brand) 7%, white);
+}
+
+.split-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .split-grid {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-container {
+    width: min(1280px, calc(100% - 1.25rem));
+  }
+}
