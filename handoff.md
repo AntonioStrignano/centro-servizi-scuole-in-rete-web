@@ -131,3 +131,18 @@ Chiudere un pass di QA + SEO finale, fare il primo commit e pubblicare una previ
 ## Aggiornamento operativo 2026-07-01 (gitignore pulito)
 - Esteso `.gitignore` per escludere anche `archivio/`, oltre alle cartelle gia generate/locali (`node_modules/`, `dist/`, `.astro/`).
 - Obiettivo: tenere fuori dal repo tutto cio che non serve al deploy o alla modifica del sorgente.
+
+## Aggiornamento operativo 2026-07-01 (accessibilita tastiera + autocertificazione)
+- Inseriti skip links globali nel layout (`torna alla home`, `vai al contenuto pagina`, `vai al footer`) per supportare la navigazione da tastiera all'inizio del documento.
+- Aggiunti target strutturali con `id` su contenuto principale e footer (`main-content`, `site-footer`) e supporto focus su `main`.
+- Esteso `src/styles/global.css` con stili dedicati per skip links e focus indicator visibile su elementi interattivi.
+- Sostituita la pagina placeholder `src/pages/legal/accessibilita.astro` con testo completo di dichiarazione/autocertificazione: riferimenti normativi, stato di conformita, misure implementate, limiti, canale feedback e data aggiornamento.
+
+## Aggiornamento operativo 2026-07-01 (privacy + cookie policy)
+- Sostituita la pagina placeholder `src/pages/legal/privacy-policy.astro` con informativa completa: titolare, finalita, basi giuridiche, destinatari, conservazione, diritti interessato, reclamo e aggiornamenti.
+- Sostituita la pagina placeholder `src/pages/legal/cookie-policy.astro` con policy completa orientata a sito vetrina: cookie tecnici, assenza analytics/profilazione alla data corrente, gestione preferenze e aggiornamenti.
+- Integrati i riferimenti societari centralizzati da `src/data/site.ts` anche nelle pagine legali per coerenza dei recapiti.
+
+## Aggiornamento operativo 2026-07-01 (normalizzazione accenti italiani)
+- Corretto l'uso degli accenti italiani nei nuovi testi legali pubblici su `src/pages/legal/accessibilita.astro`, `src/pages/legal/privacy-policy.astro` e `src/pages/legal/cookie-policy.astro`.
+- Allineata anche la label ARIA dei link rapidi in `src/layouts/MainLayout.astro` (`accessibilità`).

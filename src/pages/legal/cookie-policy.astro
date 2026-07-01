@@ -1,8 +1,67 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
+import { company } from "../../data/site";
 ---
 
 <MainLayout title="Cookie Policy | Centro Servizi Scuole In Rete">
-  <h1 class="text-3xl font-bold">Cookie Policy</h1>
-  <p class="mt-3 text-black/75">Pagina placeholder: testo legale da inserire.</p>
+  <section class="site-container section-pad">
+    <div class="max-w-4xl rounded-2xl border border-black/10 bg-white p-6 shadow-sm md:p-10">
+      <h1 class="text-3xl font-bold md:text-4xl">Cookie Policy</h1>
+
+      <p class="mt-4 text-black/75">
+        La presente Cookie Policy spiega cosa sono i cookie, quali categorie possono essere utilizzate su questo sito e come l'utente può
+        gestire le proprie preferenze.
+      </p>
+
+      <h2 class="mt-8 text-2xl font-bold">1. Cosa sono i cookie</h2>
+      <p class="mt-3 text-black/75">
+        I cookie sono piccoli file di testo che i siti web inviano al dispositivo dell'utente durante la navigazione. Possono essere usati per
+        finalità tecniche, statistiche o di profilazione.
+      </p>
+
+      <h2 class="mt-8 text-2xl font-bold">2. Cookie utilizzati da questo sito</h2>
+      <p class="mt-3 text-black/75">
+        Alla data di ultimo aggiornamento di questa pagina, il sito utilizza esclusivamente cookie tecnici necessari al funzionamento del sito
+        o equivalenti strumenti tecnici strettamente indispensabili all'erogazione del servizio richiesto dall'utente.
+      </p>
+      <ul class="mt-4 list-disc space-y-2 pl-6 text-black/75">
+        <li>Cookie tecnici di navigazione/sessione (funzionamento base del sito);</li>
+        <li>Eventuali cookie tecnici legati a preferenze funzionali essenziali.</li>
+      </ul>
+
+      <h2 class="mt-8 text-2xl font-bold">3. Cookie analytics e di profilazione</h2>
+      <p class="mt-3 text-black/75">
+        Alla data di pubblicazione, non risultano attivi cookie analytics non anonimizzati, cookie di marketing o cookie di profilazione.
+        Qualora in futuro venissero introdotti strumenti analytics o pubblicitari non tecnici, sarà preventivamente richiesto il consenso
+        tramite apposito banner e questa policy verrà aggiornata.
+      </p>
+
+      <h2 class="mt-8 text-2xl font-bold">4. Cookie di terze parti</h2>
+      <p class="mt-3 text-black/75">
+        Alcuni contenuti o servizi esterni eventualmente integrati nel sito potrebbero impostare cookie di terze parti. In tal caso verranno
+        fornite informazioni e link alle rispettive informative privacy/cookie.
+      </p>
+
+      <h2 class="mt-8 text-2xl font-bold">5. Gestione delle preferenze</h2>
+      <p class="mt-3 text-black/75">
+        L'utente può gestire o disabilitare i cookie direttamente dalle impostazioni del proprio browser. La disabilitazione dei cookie tecnici
+        può compromettere il corretto funzionamento del sito.
+      </p>
+
+      <h2 class="mt-8 text-2xl font-bold">6. Titolare del trattamento</h2>
+      <ul class="mt-4 list-disc space-y-2 pl-6 text-black/75">
+        <li>{company.name}</li>
+        <li>{company.address}</li>
+        <li>Email: <a class="font-semibold text-[var(--brand)]" href={`mailto:${company.email}`}>{company.email}</a></li>
+        <li>PEC: {company.pec}</li>
+      </ul>
+
+      <h2 class="mt-8 text-2xl font-bold">7. Aggiornamenti</h2>
+      <p class="mt-3 text-black/75">La presente cookie policy può essere aggiornata nel tempo. Ultimo aggiornamento: <strong>01/07/2026</strong>.</p>
+
+      <p class="mt-8 rounded-xl bg-[var(--paper)] p-4 text-sm text-black/70">
+        Nota: testo predisposto come base operativa per sito vetrina. Si consiglia validazione legale/compliance prima della pubblicazione definitiva.
+      </p>
+    </div>
+  </section>
 </MainLayout>

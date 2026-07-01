@@ -24,8 +24,54 @@ body {
   line-height: 1.55;
 }
 
+.skip-links {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.skip-links a {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  padding: 0.7rem 1rem;
+  border-radius: 0.55rem;
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.skip-links a:focus,
+.skip-links a:focus-visible {
+  left: 0.8rem;
+  top: 0.8rem;
+  outline: 3px solid color-mix(in oklab, var(--brand) 68%, white);
+  outline-offset: 2px;
+}
+
+.skip-links a:nth-child(2):focus,
+.skip-links a:nth-child(2):focus-visible {
+  top: 3.5rem;
+}
+
+.skip-links a:nth-child(3):focus,
+.skip-links a:nth-child(3):focus-visible {
+  top: 6.2rem;
+}
+
 a {
   color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid color-mix(in oklab, var(--brand) 70%, white);
+  outline-offset: 2px;
 }
 
 h1,

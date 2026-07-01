@@ -20,8 +20,13 @@ const { title, description = "Consulenza per scuole paritarie ed enti privati." 
     <meta name="description" content={description} />
   </head>
   <body>
+    <nav class="skip-links" aria-label="Link rapidi di accessibilità">
+      <a href="/">Torna alla home</a>
+      <a href="#main-content">Vai al contenuto pagina</a>
+      <a href="#site-footer">Vai al footer</a>
+    </nav>
     <Header />
-    <main>
+    <main id="main-content" tabindex="-1">
       <slot />
     </main>
     <Footer />

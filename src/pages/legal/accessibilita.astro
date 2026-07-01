@@ -1,8 +1,73 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
+import { company } from "../../data/site";
 ---
 
 <MainLayout title="Dichiarazione di accessibilità | Centro Servizi Scuole In Rete">
-  <h1 class="text-3xl font-bold">Dichiarazione di accessibilità</h1>
-  <p class="mt-3 text-black/75">Pagina placeholder: stato di conformità, contatti e data aggiornamento.</p>
+  <section class="site-container section-pad">
+    <div class="max-w-4xl rounded-2xl border border-black/10 bg-white p-6 shadow-sm md:p-10">
+      <h1 class="text-3xl font-bold md:text-4xl">Dichiarazione di accessibilità</h1>
+      <p class="mt-4 text-black/75">
+        Il soggetto erogatore {company.name} si impegna a rendere il proprio sito web accessibile, conformemente ai principi di
+        percepibilità, utilizzabilità, comprensibilità e robustezza previsti dagli standard internazionali WCAG (Web Content Accessibility
+        Guidelines) 2.1 livello AA.
+      </p>
+
+      <h2 class="mt-8 text-2xl font-bold">Autocertificazione di conformità</h2>
+      <p class="mt-3 text-black/75">
+        Con la presente dichiarazione, pubblicata in data <strong>01/07/2026</strong>, {company.name} autocertifica di aver effettuato una
+        verifica tecnica e redazionale del sito e di aver adottato misure di accessibilità digitale in linea con:
+      </p>
+      <ul class="mt-4 list-disc space-y-2 pl-6 text-black/75">
+        <li>Legge 9 gennaio 2004, n. 4 (Legge Stanca) e successive modificazioni;</li>
+        <li>Decreto Legislativo 10 agosto 2018, n. 106;</li>
+        <li>Direttiva (UE) 2016/2102 e indicazioni tecniche correlate;</li>
+        <li>Raccomandazioni WCAG 2.1, livello AA.</li>
+      </ul>
+
+      <h2 class="mt-8 text-2xl font-bold">Stato di conformità</h2>
+      <p class="mt-3 text-black/75">
+        Stato attuale: <strong>parzialmente conforme</strong>. Alcuni contenuti potrebbero non essere ancora pienamente ottimizzati per tutte le
+        tecnologie assistive, in particolare su pagine o componenti in aggiornamento continuo.
+      </p>
+
+      <h2 class="mt-8 text-2xl font-bold">Misure già implementate</h2>
+      <ul class="mt-4 list-disc space-y-2 pl-6 text-black/75">
+        <li>Navigazione da tastiera con link di salto rapido a home, contenuto principale e footer;</li>
+        <li>Struttura semantica delle pagine con gerarchia titoli e landmark principali;</li>
+        <li>Contrasto colore verificato sui principali componenti di interfaccia;</li>
+        <li>Indicatori di focus visibili per elementi interattivi;</li>
+        <li>Testi alternativi per immagini informative e label descrittive per i controlli di navigazione.</li>
+      </ul>
+
+      <h2 class="mt-8 text-2xl font-bold">Contenuti non ancora pienamente accessibili</h2>
+      <ul class="mt-4 list-disc space-y-2 pl-6 text-black/75">
+        <li>Possibili documenti o allegati esterni prodotti da terze parti;</li>
+        <li>Eventuali media storici non ancora completamente adeguati;</li>
+        <li>Sezioni in manutenzione o in fase di revisione periodica.</li>
+      </ul>
+
+      <h2 class="mt-8 text-2xl font-bold">Meccanismo di feedback</h2>
+      <p class="mt-3 text-black/75">
+        Per segnalare difficoltà di accesso ai contenuti o richiedere informazioni in formato accessibile, è possibile contattare:
+      </p>
+      <ul class="mt-4 list-disc space-y-2 pl-6 text-black/75">
+        <li>Email: <a class="font-semibold text-[var(--brand)]" href={`mailto:${company.email}`}>{company.email}</a></li>
+        <li>Telefono: <a class="font-semibold text-[var(--brand)]" href={`tel:${company.phone.replace(/\./g, "")}`}>{company.phone}</a></li>
+        <li>Indirizzo: {company.address}</li>
+      </ul>
+      <p class="mt-3 text-black/75">Le richieste ricevono riscontro nel più breve tempo possibile, compatibilmente con la complessità tecnica dell'intervento.</p>
+
+      <h2 class="mt-8 text-2xl font-bold">Redazione e aggiornamento</h2>
+      <p class="mt-3 text-black/75">
+        Questa dichiarazione è stata redatta tramite autovalutazione interna ed è soggetta a revisione periodica. Ultimo aggiornamento:
+        <strong>01/07/2026</strong>.
+      </p>
+
+      <p class="mt-8 rounded-xl bg-[var(--paper)] p-4 text-sm text-black/70">
+        Nota: il presente testo costituisce una bozza operativa di autocertificazione pubblicabile. Per obblighi specifici di settore o
+        adempimenti formali ulteriori, si raccomanda verifica legale/compliance dedicata.
+      </p>
+    </div>
+  </section>
 </MainLayout>
