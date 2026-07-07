@@ -34,12 +34,11 @@ Data aggiornamento: 2026-07-01
 - Mappa keyword prima versione in struttura-sito.md.
 
 ## Cosa resta da fare prima del build definitivo
-1. Rifinire SEO on-page finale (title, meta description, eventuali Open Graph) su tutte le pagine.
-2. Eseguire review contenuti legali con testo definitivo approvato dal referente.
-3. Effettuare QA finale su mobile/desktop (contrasti, spacing, coerenza CTA, link).
-4. Ottimizzare ulteriormente peso immagini se necessario (compressione e naming coerente).
-5. Eseguire primo commit strutturato del progetto.
-6. Collegare repository a Netlify e configurare dominio/SSL in ambiente di produzione.
+1. Eseguire review contenuti legali con testo definitivo approvato dal referente.
+2. Effettuare QA finale su mobile/desktop (contrasti, spacing, coerenza CTA, link).
+3. Ottimizzare ulteriormente peso immagini se necessario (compressione e naming coerente).
+4. Eseguire primo commit strutturato del progetto.
+5. Collegare repository a Netlify e configurare dominio/SSL in ambiente di produzione.
 
 ## Rischi aperti / dipendenze
 - Testi legali potenzialmente ancora da validare lato compliance.
@@ -156,6 +155,13 @@ Chiudere un pass di QA + SEO finale, fare il primo commit e pubblicare una previ
 	- `src/pages/legal/accessibilita.astro`
 	- `src/pages/legal/privacy-policy.astro`
 	- `src/pages/legal/cookie-policy.astro`
+
+## Aggiornamento operativo 2026-07-07 (sitemap + robots.txt + dominio)
+- Installata integrazione `@astrojs/sitemap` e aggiornato `astro.config.mjs` con dominio definitivo `https://www.centroserviziscuoleinretesrl.it`.
+- La sitemap viene ora generata automaticamente a ogni build in `dist/sitemap-index.xml` e `dist/sitemap-0.xml` con tutte le 11 pagine indicizzate.
+- Creato `public/robots.txt` con `Allow: /` e riferimento alla sitemap.
+- Build verificata con successo: 11 pagine generate, `[@astrojs/sitemap] sitemap-index.xml created`.
+- Rimossa voce "Rifinire SEO on-page" dalla lista TODO (completata nella sessione precedente).
 
 ## Aggiornamento operativo 2026-07-01 (ottimizzazione SEO base)
 - Esteso `src/layouts/MainLayout.astro` con metadati SEO globali: `robots`, `canonical` (quando il dominio non e placeholder), Open Graph e Twitter Card.
