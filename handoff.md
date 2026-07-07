@@ -156,6 +156,19 @@ Chiudere un pass di QA + SEO finale, fare il primo commit e pubblicare una previ
 	- `src/pages/legal/privacy-policy.astro`
 	- `src/pages/legal/cookie-policy.astro`
 
+## Aggiornamento operativo 2026-07-07 (ottimizzazione immagini performance)
+- Ridimensionate e ricompresse le immagini JPG pesanti in `public/images/` (lato lungo max 1920px, qualita ottimizzata per web).
+- Riduzioni principali ottenute:
+	- `interno professionale.jpg`: 4.6MB -> 350KB
+	- `ingresso scuola.jpg`: 2.9MB -> 596KB
+	- `progettazione.jpg`: 2.7MB -> 432KB
+	- `formazione.jpg`: 2.4MB -> 290KB
+	- `comunicazione.jpg`: 1.7MB -> 350KB
+	- `corridoio.jpg`: 1.9MB -> 740KB
+- Convertita la mappa da PNG a JPG (`public/images/maps.jpg`, 335KB) e aggiornato riferimento in `src/pages/contatti.astro`.
+- Rimosso il file non piu usato `public/images/maps.png` (2.0MB).
+- Build Astro verificata con successo dopo le modifiche (11 pagine generate + sitemap).
+
 ## Aggiornamento operativo 2026-07-07 (sitemap + robots.txt + dominio)
 - Installata integrazione `@astrojs/sitemap` e aggiornato `astro.config.mjs` con dominio definitivo `https://www.centroserviziscuoleinretesrl.it`.
 - La sitemap viene ora generata automaticamente a ogni build in `dist/sitemap-index.xml` e `dist/sitemap-0.xml` con tutte le 11 pagine indicizzate.
